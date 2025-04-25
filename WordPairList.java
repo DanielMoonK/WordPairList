@@ -15,4 +15,12 @@ public class WordPairList{
     public String toString(){
         return allPairs.toString();
     }
+
+    public int numMatches(){
+        int count = 0;
+        for(WordPair n: allPairs){
+            if(n.getFirst().equals(n.getSecond())) count++;
+        }
+        return count;
+    }
 }
